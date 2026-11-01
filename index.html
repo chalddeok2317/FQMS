@@ -597,11 +597,16 @@ form.inline select{flex:1;min-width:120px;padding:7px 9px;border-radius:7px;bord
 
 @media (max-width:1100px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi:nth-child(3){border-left:0}.kpi:nth-child(n+3){border-top:1px solid var(--line)}.cols{grid-template-columns:1fr}}
 @media (max-width:1020px){
-  .menu{display:none}#menuBtn{display:grid}.gnb .right{margin-left:auto}
+  .gnb .in{flex-wrap:wrap;height:auto;column-gap:14px;row-gap:0;padding-top:10px}
+  .menu{order:3;flex:1 0 100%;height:46px;margin:6px 0 0;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;border-top:1px solid var(--line)}
+  .menu::-webkit-scrollbar{display:none}
+  .menu>li>a.ml{padding:0 12px;font-size:14.5px;white-space:nowrap}.menu>li>a.ml::after{left:12px;right:12px}
+  .menu .drop{display:none}
+  #menuBtn{display:grid}.gnb .right{margin-left:auto}
   .util .links{display:none}
   footer.site .in{grid-template-columns:1fr 1fr}
 }
-@media (max-width:640px){.gnb .in{height:62px}.brand small{display:none}.util select{max-width:150px}.subnav h2{display:none}.gnb .right>.btn{display:none}footer.site .in{grid-template-columns:1fr}}
+@media (max-width:640px){.brand small{display:none}.util select{max-width:150px}.subnav h2{display:none}.gnb .right>.btn{display:none}footer.site .in{grid-template-columns:1fr}}
 @media (max-width:560px){
   .flow{grid-template-columns:1fr;gap:10px}
   .st{display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;text-align:left;padding:0}
